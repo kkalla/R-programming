@@ -52,7 +52,21 @@ help(package = MASS)
 str(survey)
 data("survey")
 t1<-table(survey$Sex,survey$Smoke)
+
 ##Probability of table t1 by column
 prop.table(table(survey$Sex,survey$Smoke),2)
 barplot(t1)
 stem(survey$Wr.Hnd)
+
+##Truncated Mean
+n <- round((length(iris$Sepal.Length)*0.1)/2,0)
+sorted<-sort(iris$Sepal.Length)[(n+1):(length(iris$Sepal.Length)-n)]
+length(sorted)
+
+##Measurement of Dispersion
+hist(rnorm(1000))
+?qnorm
+
+##Correlation Coefficient
+cor(iris[,1:4])
+cor.test(iris$Sepal.Length,iris$Petal.Length)
