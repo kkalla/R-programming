@@ -59,3 +59,8 @@ wordcloud(names(freq_table_sorted),
           colors = colorRampPalette(brewer.pal(8,"Blues"))(1000))
 
 install.packages("wordcloud2")
+library(wordcloud2)
+str(demoFreq)
+wordcloud2(demoFreq,size=2,color=colorVec,backgroundColor = "grey")
+colorVec = rep(c('red','skyblue'),length.out=nrow(demoFreq))
+head(demoFreq)
