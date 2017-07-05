@@ -12,4 +12,7 @@ qnorm(0.005,lower.tail=FALSE)
 
 ## Hypothesis test
 data1 <- rnorm(100,mean = 180, sd= 10)
+data2 <- rnorm(100,mean = 178, sd = 5)
 t.test(data1,mu=180)
+var.test(x=data1,y=data2)
+t.test(x=data1,y=data2,var.equal = FALSE)
