@@ -33,8 +33,8 @@ myapp <- oauth_app("github","455aac01d95614a2dfce",
                    '1996d1c49ad35042797930c5a9810810a0759e66')
 github_token <- oauth2.0_token(oauth_endpoints("github"),myapp)
 
-req <- GET("https://api.github.com/users/kkalla/repos",config(token = 
-                                                                  github_token))
+req <- GET("https://api.github.com/users/kkalla/repos",
+	   config(token = github_token))
 stop_for_status(req)
 json1 <- content(req)
 json2 <- fromJSON(toJSON(json1))
