@@ -1,6 +1,8 @@
 ##rm(list=ls())
 
 # Big data analysis example (Using Clustering and EDA)
+# Download data from below link
+# https://kbig.kr/edu_manual/html/data/product_2015_data.zip
 
 ## Reading data from csv files
 librarys <- c("plyr","ggplot2","stringr","lubridate","corrplot","RColorBrewer")
