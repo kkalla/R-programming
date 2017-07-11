@@ -37,7 +37,7 @@ colnames(temp2) <- attr(temp,"split_labels")$name
 cor_pig <- cor(temp2)
 corrplot(cor_pig,method = "color",type = "upper",order = "hclust",
          addCoef.col="white",tl.srt=0,tl.col="black",tl.cex=.7,
-         col=brewer.pal(n=8,name="PuOr"))
+         col=brewer.pal(n=8,name="RdYlBu"))
 
 ## data saving
 write.csv(temp2,"Statistic/pig_region.csv",fileEncoding = "UTF-8")
