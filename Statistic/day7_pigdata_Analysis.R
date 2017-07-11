@@ -28,8 +28,8 @@ g2 <- ggplot(pig_region_yearly_mean,aes(name,mean_price,fill = factor(year)))
 g2 + geom_bar(stat = "identity",position = "dodge",color = "white")
 ?melt
 
-## corrplot
-library(corrplot)
+## corrplot 
+library(corrplot) 
 
 temp <- plyr::dlply(pig_region_daily_mean,.(name),select,mean_price)
 temp2 <- as.data.frame(temp)
