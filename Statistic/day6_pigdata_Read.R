@@ -1,6 +1,5 @@
-##rm(list=ls())
-
-# Big data analysis example (Using Clustering and EDA)
+rm(list=ls())
+# Big data analysis example (Using Clustering)
 
 ## Reading data from csv files
 librarys <- c("plyr","ggplot2","stringr","lubridate","corrplot","RColorBrewer")
@@ -19,18 +18,5 @@ head(code,n=10)
 str(code)
 head(weather,n=10)
 str(weather)
-sum(is.na(weather$일자))
-weather$일자 <- ymd(weather$일자)
-na_weather <- is.na(weather$일자)
-old[na_weather]
 
-product$date <- as.Date.character(product$date,format = "%Y-%m-%d")
 
-## Change variable names
-colnames(product) <- c('date','category','item','region','mart','price')
-category <- subset(code,code$구분코드설명=="품목코드")
-colnames(category) <- c("code",'exp','item','name')
-
-total_pig <- product[which(product$item==514),]
-region <- subset(code,code$구분코드설명=="지역코드")
-colnames(region) <- c('code','exp','region','name')
