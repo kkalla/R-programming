@@ -7,3 +7,6 @@
 
 ## Textmining
  Includes R codes to practice textmining, some examples
+
+## Shiny
+ Includes shiny apps made by shiny package in R
