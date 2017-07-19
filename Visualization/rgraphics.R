@@ -94,3 +94,7 @@ layout.show(3)
 ## ggplot2 package
 library(ggplot2)
 
+data("women")
+str(women)
+
+quakes
